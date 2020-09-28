@@ -1,0 +1,167 @@
+Building a Chatbot using Chatterbot in Python
+In this tutorial, you'll learn how to build a chatbot using chatterbot in Python.
+
+Are you tired of waiting in long queues for your call to be connected to the customer service executive? Does reading FAQ's make you feel lethargic? Then you are on the right page. Can you remember the last time you communicated to a customer service agent via chat for the wrong item being delivered to you? There is a high probability that you were being communicated to by a bot rather than a customer service representative. So what exactly are bots? How do we build one? What source of code does it require? These are some of the questions which will be answered in this blog post!
+
+Artificial intelligence, which brings into play machine learning and Natural language Processing (NLP) for building bot or chatbot, is specifically designed to unravel the smooth interaction between humans and computers. Chatbots are everywhere, be it a banking website, pizza store, to e-commerce shopping stores, you will find chatbots left, right, and center. Chatbots provide real-time customer service assistance on a range of pre-defined questions related to the domain it is built on. It adapts natural human language and converses with humans in a human-like manner.
+
+To simplify the chatbot's definition, we can say chatbots are the evolution of Question Answer systems employing natural language processing. As per sources by the year 2024, the global conversation market's size will grow to $15.7 billion, with 30.2% being the annual growth rate. For instance, amidst the CoronaVirus Pandemic, we have witnessed thousands of hoaxes circulating on WhatsApp, such as what can be used to treat COVID or what can be beneficial in increasing immunity, or whether the virus was developed in a lab. Putting an end to such hoaxes, Facebook launched a chatbot that works as a fact-checker.
+
+In this tutorial, we’ll learn Chatbot building in detail, including:
+
+Introduction
+What is Chatbot?
+How Does Chatbot Work?
+Comparison of Chatbot platforms
+Chatterbot Library
+Building a Chatbot using Chatterbot
+Chatbot Testing
+Conclusion
+What is a chatbot?
+The term “chatterbot” came in existence in 1994 when Michael Mauldin created his first chatbot named “Julia”. As per the Oxford Dictionary, a chatbot is defined as “A computer program designed to simulate conversation with human users, especially over the internet.” It can be looked upon as a virtual assistant that communicates with users via text messages and helps businesses in getting close to their customers. It is a program designed to imitate the way humans communicate with each other. It can be done through a chat interface or by voice call. Developers usually design chatbots so that it is difficult to tell for users whether they are communicating with a person or a robot.
+
+Chatbots helps any business/organization in accomplishing the following goals:
+
+Increases operational efficiency.
+Automating customer request fulfillment.
+Handling basic queries, which in turn free employees to work for complex & higher value inquiries.
+Offers Multi-language support.
+Saves time & effort by automating customer support.
+Improves the response rate as well as customer engagement.
+Personalization of communication
+
+Source
+How Does a Chatbot Work?
+Chatbots are nothing but software applications that have an application layer, a database, and APIs. To simplify the working of the chatbot, we can say it works on pattern matching to classify text and produce a suitable response for the questions/queries addressed by the user. The chatbot responds to the user as per the program that has been fed in it. Chatbots are of different types, depending on how they are used. Mainly there are three types of chatbots, and they are as follows:
+
+Rule-Based Chatbot: This is the basic chatbot made, the user interacts with this kind of bot by using predefined options. To get answers from these bots, users need to click on certain options. These kinds of bots collect the user's request, analyze it, and then offer results in the form of buttons. These bots are commonly used to replace frequently asked questions when it comes to complex queries; they aren't always the best solution.
+
+Independent(Keyword) Chatbots: These are machine learning bots, unlike rule-based chatbots, they analyze what the user wants and respond appropriately. These chatbots use customizable keywords and machine learning to determine how to respond to users' requests effectively and efficiently.
+
+NLP (Contextual) Chatbots: These are so far the most advanced chatbots. They are a combination of best from rule-based and keyword chatbots. These chatbots use NLP to understand the context and intent in users' requests and thus act accordingly. These chatbots can handle multiple requests from the same user at ease.
+
+Comparisons of Chatbot Platform
+Many platforms offer customized chatbots with automation making seamless, always on-time, best in class support services available to customers whenever they need it without the box conversational capacities. Customers are also keen to purchase from a business that they can easily connect over messages.
+
+Listing down the AI chatbot building platform in 2020:
+
+Azure Bot Service: Azure bot service offers to build a chatbot from scratch, i.e., you can build, connect, test, and deploy. It allows developers to use the open-source SDK and tools. It also enables developers to create advanced bots such as virtual assistants to handle complex queries.
+
+Botsify: This tool's uniqueness is that it enables non-technical users to build a chatbot with its intuitive interface. Bots are represented here as stories, i.e., you can create multiple stories or multiple chatbots and deploy them as per the requirement. Another great feature is the ability to save users' responses to a form that can be easily exported to a CSV.
+
+Amazon Lex: Amazon lex allows developers to build conversational interfaces using text and voice. It comes up with advanced deep learning functionalities and NLP for understanding the context of the text. It provides an easy to use console for building chatbot in minutes.
+
+Mobile Monkey: Mobile monkey offers developers to build chatbots specifically for marketing purposes. It allows developers to make Facebook ad bots, SMS bots, and native web chatbots all in a single platform. They also offer ready-made chatbot templates for every business possible, which can be directly embedded on a website.
+
+ChatterOn: It claims to handle different types of rich content responses from the Bot as it allows developers to connect different APIs at each interaction with the user. ChatterOn offers more than 20 pre-built bolts that can be put to use in a single click. It doesn’t require much coding, which makes it easier for non-technical users to build chatbots.
+
+TARS: It offers you to build a conversational landing page, which enables you to create an automated chatbot to greet you, customers, give them relevant information about their queries regarding your products, and ask for their contact simultaneously. Tars offers many pre-defined chatbot templates, which are classified into two parts - by industry and by use-case.
+
+By now, you must be curious to build a chatbot of your own. And what's better than a customizable NLP chatbot? Let's get started for building our very own chatbot in Python using library chatterbot.
+
+Chatterbot
+
+As the name suggests, chatterbot is a python library specifically designed to generate chatbots. This algorithm uses a selection of machine learning algorithms to fabricate varying responses to users as per their requests.
+
+Chatterbot makes it easier to develop chatbots that can engage in conversations. It starts by creating an untrained chatterbot that has no prior experience or knowledge regarding how to communicate. As the users enter statements, the library saves the request made by the user as well as it also saves the responses that are sent back to the users. As the number of instances increases in chatterbot, the accuracy of the responses made by chatterbot also increases.
+
+Chatterbot is trained to search the closest analogous response by finding the closest analogous request made by users that is equivalent to the new request made. Then it selects a response from the already existing responses. The USP of chatterbot is that it enables developers to create their own dataset and structures at ease.
+
+Building a Chatbot using Chatterbot
+Let's begin by installing the chatterbot library. For creating chatbot also need to install chatterbot corpus. Corpus - literal meaning is a collection of words. This contains a corpus of data that is included in the chatterbot module. Each corpus is nothing but a prototype of different input statements and their responses. These corpus are used by bots to train themselves. The most recommended method for installing chatterbot and chatterbot_corpus is by using pip.
+
+Installation commands for terminal:
+
+pip install chatterbot
+pip install chatterbot_corpus
+Installation commmands for Jupyter Notebook:
+
+!pip install chatterbot
+!pip install chatterbot_corpus
+Let's first import the Chatbot class of the chatterbot module.
+
+# Importing chatterbot
+from chatterbot import ChatBot
+Create Chatbot Instance
+Now, it's time for the most interesting part i.e., naming your chatbot by creating a Chatbot object. You can choose any name you want. This single line of code generates our very own new bot named Buddy. We need to specify some more parameters before running our first program.
+
+# Create object of ChatBot class
+bot = ChatBot('Buddy')
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Unzipping taggers/averaged_perceptron_tagger.zip.
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Unzipping corpora/wordnet.zip.
+You can position the storage adapter with the chatbot object. Storage Adapters allows you to connect to a particular storage unit or network. For using a storage adapter, we need to specify it. We will position the storage adapter by assigning it to the import path of the storage we want to use. Here we are using SQL Storage Adapter, which permits chatbot to connect to databases in SQL. By using the database parameter, we will create a new SQLite Database. Please follow the code below, for creating a new database for chatbot.
+
+# Create object of ChatBot class with Storage Adapter
+bot = ChatBot(
+    'Buddy',
+    storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    database_uri='sqlite:///database.sqlite3'
+)
+You can also position the logical adapter with a chatbot object. As the name implies, Logical Adapter regulates the logic behind the chatterbot, i.e., it picks responses for any input provided to it. This parameter contains a list of logical operators. Chatterbot allows us to use a number of logical Adapters. When more than one logical adapter is put to use, the chatbot will calculate the confidence level, and the response with the highest calculated confidence will be returned as output. Here we have used two logical adapters: BestMatch and TimeLogicAdapter.
+
+# Create object of ChatBot class with Logic Adapter
+bot = ChatBot(
+    'Buddy',  
+    logic_adapters=[
+        'chatterbot.logic.BestMatch',
+        'chatterbot.logic.TimeLogicAdapter'],
+)
+Training the chatbot
+Now the final step in making a chatbot is to train the chatbot using the modules available in chatterbot. Training a chatbot using chatterbot is as simple as providing a conversation into the chatbot database. As soon as the chatbot is given a dataset, it produces the essential entries in the chatbot's knowledge graph to represent the input and output in the right manner. Firstly, let's import the ListTrainer, create its object by passing the Chatbot object, and call the train() method by passing a list of sentences.
+
+# Inport ListTrainer
+from chatterbot.trainers import ListTrainer
+
+trainer = ListTrainer(bot)
+
+trainer.train([
+'Hi',
+'Hello',
+'I need your assistance regarding my order',
+'Please, Provide me with your order id',
+'I have a complaint.',
+'Please elaborate, your concern',
+'How long it will take to receive an order ?',
+'An order takes 3-5 Business days to get delivered.',
+'Okay Thanks',
+'No Problem! Have a Good Day!'
+])
+List Trainer: [####################] 100%
+Chatbot Testing
+The last step of this tutorial is to test the chatterbot’s conversational skills. For testing its responses, we will call the get_responses() method of Chatbot instance.
+
+# Get a response to the input text 'I would like to book a flight.'
+response = bot.get_response('I have a complaint.')
+
+print("Bot Response:", response)
+Bot Response: Please elaborate, your concern
+We will create a while loop for our chatbot to run in. When statements are passed in the loop, we will get an appropriate response for it, as we have already entered data into our database. If we get "Bye" or "bye" statement from the user, we can put an end to the loop and stop the program.
+
+name=input("Enter Your Name: ")
+print("Welcome to the Bot Service! Let me know how can I help you?")
+while True:
+    request=input(name+':')
+    if request=='Bye' or request =='bye':
+        print('Bot: Bye')
+        break
+    else:
+        response=bot.get_response(request)
+        print('Bot:',response)
+Enter Your Name: Avinash
+Welcome to the Bot Service! Let me know how can I help you?
+Avinash:I need your assistance regarding my order
+Bot: Please, Provide me with your order id
+Avinash:12345
+Bot: No Problem! Have a Good Day!
+Avinash:Bye
+Bot: Bye
+Conclusion
+Congratulations, you have made it to the end of this tutorial!
+
+This article was based on learning how to make a chatbot in Python using the ChatterBot library. Building a chatbot with ChatterBot was not only simple, but also, the results were accurate. With Artificial Intelligence and Machine Learning, in advancement, everything and anything is possible to achieve whether it is creating bots with conversational skills like humans or be it anything else.
+
